@@ -1,0 +1,259 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎄 Abdullah & Jana 🎄</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+<style>
+body{
+  margin:0;
+  padding:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#8b0000,#0b3d2e);
+  color:white;
+  overflow-x:hidden;
+  min-height:100vh;
+  position:relative;
+}
+.container{
+  position:relative;
+  max-width:420px;
+  margin:10vh auto 5vh;
+  padding:30px;
+  background:rgba(255,255,255,0.12);
+  border-radius:30px;
+  text-align:center;
+  backdrop-filter:blur(10px);
+  box-shadow:0 8px 32px rgba(0,0,0,0.3);
+}
+.title{
+  font-family:'Great Vibes',cursive;
+  font-size:40px;
+  margin-bottom:10px;
+  opacity:0;
+  animation:fadeIn 2s forwards;
+}
+.text-box{
+  border:2px dashed rgba(255,255,255,0.5);
+  border-radius:25px;
+  padding:20px;
+  margin:15px 0;
+  line-height:1.8;
+  text-align:right;
+  direction:rtl;
+  opacity:0;
+}
+.forever{
+  font-family:'Great Vibes',cursive;
+  font-size:24px;
+  margin-top:15px;
+  opacity:0;
+}
+button{
+  padding:12px;
+  width:80%;
+  border:none;
+  border-radius:20px;
+  margin:10px 0;
+  font-size:16px;
+  background:#ff4d6d;
+  color:white;
+  cursor:pointer;
+  transition:all 0.3s;
+}
+button:hover{
+  background:#ff1744;
+  transform:scale(1.05);
+}
+#message,#gallery,#celebration{
+  display:none;
+}
+img{
+  width:100%;
+  max-width:350px;
+  border-radius:20px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.3);
+  display:block;
+  margin:0 auto;
+  opacity:0;
+  transform:translateY(20px);
+  transition:all 1s;
+}
+.image-text{
+  font-size:18px;
+  margin:15px 0;
+  color:#ffb3c1;
+  text-align:center;
+  opacity:0;
+}
+.snow{
+  position:fixed;
+  top:-10px;
+  color:white;
+  font-size:12px;
+  animation:fall linear infinite;
+  z-index:1;
+  pointer-events:none;
+}
+@keyframes fall{
+  to{transform:translateY(110vh);}
+}
+.heart-bg{
+  position:fixed;
+  bottom:-20px;
+  font-size:20px;
+  color:rgba(255,192,203,0.6);
+  animation:floatUp 7s linear infinite;
+  z-index:1;
+  pointer-events:none;
+}
+@keyframes floatUp{
+  to{transform:translateY(-120vh);opacity:0;}
+}
+@keyframes fadeIn{
+  to{opacity:1;}
+}
+#celebration h1{
+  font-size:60px;
+  animation:pulse 1s infinite;
+}
+@keyframes pulse{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.2);}
+}
+.confetti{
+  position:absolute;
+  width:10px;
+  height:10px;
+  background-color:red;
+  top:-10px;
+  animation:fallConfetti 3s linear infinite;
+}
+@keyframes fallConfetti{
+  to{transform:translateY(100vh) rotate(360deg);opacity:0;}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div id="login">
+    <h1>❤️ 🔒</h1>
+    <h3>🎄 ادخل الباسورد ❤️</h3>
+    <input type="password" id="pass" placeholder="اكتب الباسورد" onkeypress="if(event.key==='Enter')check()">
+    <button onclick="check()">دخول 💕🎉</button>
+  </div>
+
+  <div id="message">
+    <div class="title">Abdullah&Jana</div>
+    <div class="text-box" id="textContent">
+      سنه جديده علينا اول سنه ندخلها مع بعض<br>
+      ويارب تكون سنه سعيده عليكي<br>
+      وربنا يخليكي ليا يا نور عيني<br>
+      وتحققي الي نفسك فيه يارب<br>
+      وتكوني معايا لأخر العمر<br>
+      ونبقا مع بعض ديما<br>
+      مفيش حاجه تفرقنا<br>
+      وانا بعشقكك يا جنجون 😍😍
+      <br><br>
+      ربنا يخليكي ليا<br>
+      ويديمك في حياتي يا عيوني يارب ❤️🫂
+    </div>
+    <div class="forever">forever💕</div>
+    <button onclick="nextToGallery()">Next 💕🎉</button>
+  </div>
+
+  <div id="gallery">
+    <div class="gallery-item">
+      <img id="img1" src="https://i.postimg.cc/x8TXynYN/IMG_20250818_043038_764.jpg" alt="صورة 1">
+      <p class="image-text">اول صوره بعتهالي وكانت لعيونك الحلوين 😍😍</p>
+    </div>
+    <div class="gallery-item">
+      <img id="img2" src="https://i.postimg.cc/hvyf26PV/gemini_2_5_flash_image_preview_(nano_banana)_A_polaroid_photo_of.png" alt="صورة 2">
+      <p class="image-text">بعشق الصوره دي عشان م بعض فيها ❤️🫂</p>
+    </div>
+    <div class="gallery-item">
+      <img id="img3" src="https://i.postimg.cc/NfjXR7fz/gemini_2_5_flash_image_preview_(nano_banana)_A_polaroid_photo_of_(1).png" alt="صورة 3">
+      <p class="image-text">بعشق الصوره دي اوي 😍😍😍</p>
+    </div>
+    <div class="gallery-item">
+      <img id="img4" src="https://i.postimg.cc/1tKgqfxR/Screenshot_2025_09_19_12_54_40_005_com_miui_gallery_edit.jpg" alt="صورة 4">
+      <p class="image-text">ببقا عايز ابوسك من بوقك 😍</p>
+    </div>
+    <div class="gallery-item">
+      <img id="img5" src="https://i.postimg.cc/Kjv1rxFB/gemini_2_5_flash_image_preview_(nano_banana)_A_polaroid_photo_of_1758302124517.png" alt="صورة 5">
+      <p class="image-text">ازاي اكبر مني ❤️😂😂</p>
+    </div>
+
+    <button onclick="celebrate()">2026forever 💕🎉</button>
+  </div>
+
+  <div id="celebration">
+    <h1>🎉🎊✨</h1>
+    <h2>Happy New Year 2026!</h2>
+    <div class="forever">Abdullah & Jana Forever 💕</div>
+  </div>
+
+</div>
+
+<audio id="bells" src="https://www.soundjay.com/misc/sounds/bell-ringing-01.mp3"></audio>
+<audio id="fireworks" src="https://www.soundjay.com/misc/sounds/fireworks-01.mp3"></audio>
+
+<script>
+function check(){
+  const pass = document.getElementById('pass').value;
+  if(pass==='1808'){
+    document.getElementById('login').style.display='none';
+    showMessage();
+    document.getElementById('bells').play();
+    alert('🎉 Congratulations! 🎉');
+  }else{
+    alert('كلمة مرور خاطئة!');
+  }
+}
+
+function showMessage(){
+  const msg = document.getElementById('message');
+  msg.style.display='block';
+  let text = document.getElementById('textContent');
+  text.style.opacity=0;
+  let opacity = 0;
+  let interval = setInterval(()=>{
+    opacity +=0.02;
+    text.style.opacity=opacity;
+    if(opacity>=1) clearInterval(interval);
+  },50);
+}
+
+function nextToGallery(){
+  document.getElementById('message').style.display='none';
+  const gallery = document.getElementById('gallery');
+  gallery.style.display='block';
+  const imgs = gallery.querySelectorAll('img');
+  const texts = gallery.querySelectorAll('.image-text');
+  imgs.forEach((img,i)=>{
+    setTimeout(()=>{ img.style.opacity=1; img.style.transform='translateY(0)'; texts[i].style.opacity=1; }, i*500);
+  });
+  document.getElementById('bells').play();
+}
+
+function celebrate(){
+  const gallery = document.getElementById('gallery');
+  gallery.style.display='none';
+  document.getElementById('celebration').style.display='block';
+  document.getElementById('fireworks').play();
+  for(let i=0;i<50;i++){
+    let confetti = document.createElement('div');
+    confetti.className='confetti';
+    confetti.style.left=Math.random()*100+'%';
+    confetti.style.backgroundColor=['#ff0','#f0f','#0ff','#0f0','#f00'][Math.floor(Math.random()*5)];
+    document.body.appendChild(confetti);
+    setTimeout(()=>{ confetti.remove(); },3000);
+  }
+}
+</script>
+
+</body>
+</html>
